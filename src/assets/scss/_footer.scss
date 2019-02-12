@@ -1,0 +1,104 @@
+footer{
+    width: 100%;
+    background: $backDark;
+    color: $fontWhite;
+    padding: 90px 0 0;
+    font-family: $fontLato;
+
+    .footer-first{
+        display: flex;
+        justify-content: space-between;
+        max-width: 1140px;
+        margin:0 auto;
+        padding: 0 get-vw(60px);
+        padding-bottom: 130px;
+    }
+
+    .footer-seconde{
+        border-top: 2px solid $border;
+        padding: 100px;
+        p{
+            position: relative;
+            width: get-vw(365px);
+            margin: 0 auto;
+            text-align: center;
+        }
+        p::before{
+            @extend .line;
+            left: get-vw(-10px);
+            top: 50%;
+            transform: translate(-50%);
+        }
+
+        p::after{
+            @extend .line;
+            right: get-vw(-40px);
+            top: 50%;
+            transform: translate(-50%);
+        }
+    }
+
+    .bloc-footer{
+        width: 33.33%;
+       
+        &:first-child{
+            text-align: center;
+        }
+
+        &:first-child{
+            p{
+                margin-top: 20px;
+                position: relative;
+                text-transform: uppercase;
+                font-size: 12px;
+                line-height: 1.6em;
+                padding: 30px 40px 0;
+                letter-spacing: 4px;
+            }
+            p::before{
+                @extend .line;
+                left: 50%;
+                top: 0;
+                transform: translateX(-50%);
+            }
+        }
+
+        &:nth-child(2){
+            font-size: 13px;
+        }
+
+        &_link{
+            margin-top: 35px;
+            span{margin-right: 10px;}
+        }
+        &_tweet{
+            margin-bottom: 40px;
+            display: flex;
+            img{
+                margin-right: 30px;
+                max-width: 45px;
+                height: 45px;
+            }
+            p{line-height: 24px;}
+            span{
+                color: #767676;
+            }
+        }
+    }
+
+    h3{
+        font-size: 18px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-weight: 800;
+        margin-bottom: 50px;
+    }
+
+    ul{
+        list-style: none;
+        line-height: 2em;
+        p{
+            margin: 0;
+        }
+    }
+}

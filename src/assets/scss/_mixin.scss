@@ -1,0 +1,67 @@
+@mixin degrade {
+    background: linear-gradient(to right, #f6b88f 0%, #b0db43 100%);
+}
+
+@mixin image-shadow{
+  -webkit-box-shadow: 37px 43px 86px -21px rgba(0,0,0,0.2);
+  -moz-box-shadow: 37px 43px 86px -21px rgba(0,0,0,0.2);
+  box-shadow: 37px 43px 86px -21px rgba(0,0,0,0.2);
+}
+
+//RESPONSIVE
+/*MIXIN RESPONSIVE */
+
+@mixin breakpoint($point) {
+    @if $point == 'desktop' {
+      @media (min-width: 70em) { @content ; }
+    } @else if $point == 'laptop' {
+      @media (min-width: 64em) { @content ; }
+    } @else if $point == 'tablet' {
+      @media (min-width: 50em) { @content ; }
+    } @else if $point == 'phablet' {
+      @media (max-width: 920px)  { @content ; }
+    } @else if $point == 'mobileonly' {
+      @media (max-width: 37.5em)  { @content ; }
+   }
+ }
+
+ @mixin line-before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: white;
+    transition: 0.2s ease-in-out all;
+ }
+
+ @mixin line-vertical {
+  content: '';
+  position: absolute;
+  bottom: -50%;
+  transform: translate(50%,-50%);
+  left: 50%;
+  width: 3px;
+  height: 40px;
+  background: white;
+}
+
+ //FUNCTION PX TO EM
+ $browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+@function get-vw($target) { 
+  $vw-context: (1920*.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
+
+@function get-vw-m($target) { 
+  $vw-context: (320*.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
+
+$paddingBloc: get-vw(240px);
+$padding2Bloc: get-vw(480px);

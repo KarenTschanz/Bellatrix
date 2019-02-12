@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    display: flex;
+    width: 100%;
+    color: $dark;
+    @include breakpoint(phablet){
+        display: inline-block;
+    }
+
+    &:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+
+    .bloc {
+        width: 50%;
+        position: relative;
+        @include breakpoint(phablet){
+            width: 100%;
+        }
+    }
+
+    .bloc-text {
+        width: calc(50% - 25vw);
+        @include breakpoint(phablet){
+            width: 100%;
+        }
+
+        &_logo{
+            margin-bottom: 45px;
+        }
+    }
+
+    .lato{
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        font-size: 13px;
+        line-height: 24px;
+    }
+    .italic{
+        font-family: $fontMerri;
+        font-weight: 300;
+        font-style: italic;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 1px;
+        margin-bottom: 60px;
+    }
+}
+
+.bloc-text {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: $paddingBloc;
+}
+
+.lato {
+    font-family: $fontLato;
+}
+
+.line {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 1px;
+    background: $fontWhite;
+}
+
+h2{
+    font-size: get-vw(24px);
+    font-weight: 800;
+    font-family: $fontMerri;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    &::before{
+        @extend .line;
+        background: $dark;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
+
+.section-bella {
+    .bloc-color {
+        background: $jaunepipi;
+        position: relative;
+        &_button{
+            width: 90px;
+            height: 90px;
+            background: $dark;
+            position: fixed;
+            z-index: 2000;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%) rotate(45deg);
+
+            .button-line{
+                @extend .line;
+                background: white;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%) rotate(-45deg);
+            }
+            .icon-up-arrow,
+            .icon-down-arrow{
+                font-size: 30px;
+            }
+            .icon-up-arrow{
+                top: 10px;
+                left: 28%;
+                position: absolute;
+                transform:  translateX(-50%) rotate(-45deg) !important;
+            }
+
+            .icon-down-arrow{
+                top: 60%;
+                left: 75%;
+                position: absolute;
+                transform:  translateX(-50%) rotate(-45deg) !important;
+            }
+        }
+    }
+    
+}
+
+.section-mimosa {
+    .bloc-color {
+        background: url(../img/mimosa-photo.jpg);
+        background-size: cover;
+        background-repeat: none;
+        background-position: center center;
+    }
+}
+
+.section-gatria {
+    .bloc-color {
+        background: url(../img/gatria.jpg);
+        background-size: cover;
+        background-repeat: none;
+        background-position: center center;
+
+        .bloc-color_img {
+            position: absolute;
+            width: 50%;
+            left: 50%;
+            text-align: center;
+
+            img {
+                width: 40%;
+            }
+
+            &:first-child {
+                img {
+                    position: relative;
+                    margin-top: 25%;
+                }
+            }
+
+            &:nth-child(2) {
+                top: 50%;
+
+                img {
+                    position: relative;
+                    top: 100px;
+                }
+            }
+
+        }
+    }
+}
+
+.section-adhara {
+    .bloc-color {
+        background: url(../img/adhara.jpg);
+        background-size: cover;
+        background-repeat: none;
+        background-position: center center;
+    }
+}
+
+.section-amber {
+    .bloc-color {
+        background: url(../img/amber.jpg);
+        background-size: cover;
+        background-repeat: none;
+        background-position: center center;
+    }
+}
