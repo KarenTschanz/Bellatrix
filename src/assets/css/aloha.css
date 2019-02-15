@@ -61,13 +61,29 @@ footer ul p { margin: 0; }
 
 * { margin: 0; padding: 0; }
 
-a { text-decoration: none; }
+a { text-decoration: none; cursor: pointer; }
 
-section { display: flex; width: 100%; color: #1e1e1e; }
+button { border: none; cursor: pointer; }
+
+ul { list-style: none; }
+
+li.presentation { width: 8px; height: 8px; border: 3px solid #1e1e1e; border-radius: 100%; margin: 10px 0; }
+
+li.slick-active { background: #1e1e1e; }
+
+.ms-right .section-footer { width: 200%; -webkit-transform: translateX(-50%); transform: translateX(-50%); position: relative; background: #2a2a2a; }
+
+.ms-left .section-footer { background: #2a2a2a; }
+
+@media (max-width: 920px) { .ms-left, .ms-right { position: absolute !important; display: block !important; width: 100% !important; height: 50% !important; } }
+
+@media (max-width: 920px) { .ms-right { width: 100%; } }
+
+section { display: flex !important; width: 100%; color: #1e1e1e; }
 
 @media (max-width: 920px) { section { display: inline-block; } }
 
-section:nth-child(odd) { flex-direction: row-reverse; }
+section:nth-child(even) { flex-direction: row-reverse; }
 
 section .bloc { width: 50%; position: relative; }
 
@@ -85,29 +101,33 @@ section .italic { font-family: "Merriweather", serif; font-weight: 300; font-sty
 
 .bloc-text { text-align: center; display: flex; align-items: center; padding: 12.5vw; }
 
+@media (max-width: 920px) { .bloc-text { z-index: 80; top: 56%; height: 100%; -webkit-transform: translateY(-50%); transform: translateY(-50%); position: absolute; background: rgba(255, 255, 255, 0.9); } }
+
 .lato { font-family: "Lato", sans-serif; }
 
-.line, footer .footer-seconde p::before, footer .footer-seconde p::after, footer .bloc-footer:first-child p::before, h2::before, .section-bella .bloc-color_button .button-line { position: absolute; content: ''; width: 30px; height: 1px; background: white; }
+.line, footer .footer-seconde p::before, footer .footer-seconde p::after, footer .bloc-footer:first-child p::before, h2::before, .bloc-color_button .button-line { position: absolute; content: ''; width: 30px; height: 1px; background: white; }
 
 h2 { font-size: 1.25vw; font-weight: 800; font-family: "Merriweather", serif; text-transform: uppercase; letter-spacing: 2px; position: relative; padding-bottom: 30px; margin-bottom: 30px; }
 
 h2::before { background: #1e1e1e; bottom: 0; left: 50%; -webkit-transform: translate(-50%); transform: translate(-50%); }
 
-.section-bella .bloc-color { background: #ecead0; position: relative; }
+.bloc-color_button { width: 90px; height: 90px; background: #1e1e1e; position: fixed; z-index: 2000; top: 50%; left: 50%; -webkit-transform: translate(-50%) rotate(45deg); transform: translate(-50%) rotate(45deg); }
 
-.section-bella .bloc-color_button { width: 90px; height: 90px; background: #1e1e1e; position: fixed; z-index: 2000; top: 50%; left: 50%; -webkit-transform: translate(-50%) rotate(45deg); transform: translate(-50%) rotate(45deg); }
+@media (max-width: 920px) { .bloc-color_button { display: none; } }
 
-.section-bella .bloc-color_button .button-line { background: white; top: 50%; left: 50%; -webkit-transform: translate(-50%) rotate(-45deg); transform: translate(-50%) rotate(-45deg); }
+.bloc-color_button .button-line { background: white; top: 50%; left: 50%; -webkit-transform: translate(-50%) rotate(-45deg); transform: translate(-50%) rotate(-45deg); }
 
-.section-bella .bloc-color_button .icon-up-arrow, .section-bella .bloc-color_button .icon-down-arrow { font-size: 30px; }
+.bloc-color_button .icon-up-arrow, .bloc-color_button .icon-down-arrow { font-size: 30px; }
 
-.section-bella .bloc-color_button .icon-up-arrow { top: 10px; left: 28%; position: absolute; -webkit-transform: translateX(-50%) rotate(-45deg) !important; transform: translateX(-50%) rotate(-45deg) !important; }
+.bloc-color_button .icon-up-arrow { top: 10px; left: 28%; position: absolute; -webkit-transform: translateX(-50%) rotate(-45deg) !important; transform: translateX(-50%) rotate(-45deg) !important; }
 
-.section-bella .bloc-color_button .icon-down-arrow { top: 60%; left: 75%; position: absolute; -webkit-transform: translateX(-50%) rotate(-45deg) !important; transform: translateX(-50%) rotate(-45deg) !important; }
+.bloc-color_button .icon-down-arrow { top: 60%; left: 75%; position: absolute; -webkit-transform: translateX(-50%) rotate(-45deg) !important; transform: translateX(-50%) rotate(-45deg) !important; }
 
-.section-mimosa .bloc-color { background: url(../img/mimosa-photo.jpg); background-size: cover; background-repeat: none; background-position: center center; }
+.ms-left .section-bella { background: #ecead0; }
 
-.section-gatria .bloc-color { background: url(../img/gatria.jpg); background-size: cover; background-repeat: none; background-position: center center; }
+.section-mimosa .bloc-color { background: url(../img/mimosa-photo.jpg); background-size: cover; background-repeat: none; background-position: center center; height: 100%; }
+
+.section-gatria .bloc-color { background: url(../img/gatria.jpg); background-size: cover; background-repeat: none; background-position: center center; height: 100%; }
 
 .section-gatria .bloc-color .bloc-color_img { position: absolute; width: 50%; left: 50%; text-align: center; }
 
@@ -119,6 +139,10 @@ h2::before { background: #1e1e1e; bottom: 0; left: 50%; -webkit-transform: trans
 
 .section-gatria .bloc-color .bloc-color_img:nth-child(2) img { position: relative; top: 100px; }
 
-.section-adhara .bloc-color { background: url(../img/adhara.jpg); background-size: cover; background-repeat: none; background-position: center center; }
+.section-adhara .bloc-color { background: url(../img/adhara.jpg); background-size: cover; background-repeat: none; background-position: center center; height: 100%; }
 
-.section-amber .bloc-color { background: url(../img/amber.jpg); background-size: cover; background-repeat: none; background-position: center center; }
+.section-amber .bloc-color { background: url(../img/amber.jpg); background-size: cover; background-repeat: none; background-position: center center; height: 100%; }
+
+#multiscroll-nav li span { background: #1e1e1e; border: 2px solid transparent; }
+
+#multiscroll-nav li .active span { border: 2px solid #1e1e1e; background: white !important; }

@@ -8,6 +8,7 @@
     <title>Bellatrix</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:400,900|Merriweather:300i,400,700|Open+Sans:600" rel="stylesheet">
     <link href="src/assets/css/aloha.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/multiscroll.js/0.2.2/jquery.multiscroll.min.css">
     <link href="src/assets/fonts/style.css" rel="stylesheet">
 </head>
 
@@ -38,127 +39,168 @@
         </nav>
     </header>
 
-    <section class="section-bella">
-        <div class="bloc bloc-color">
-            <div class="bloc-color_button">
-                <span class="icon-up-arrow"></span>
-                <div class="button-line"></div>
-                <span class="icon-down-arrow"></span>
+    <div class="bloc-color_button">
+        <button class="scroll-btn-up"><span class="icon-up-arrow"></span></button>
+        <div class="button-line"></div>
+        <button class="scroll-btn-down"><span class="icon-down-arrow"></span></button>
+    </div>
+    <main class="wrapper active-page1" id="multiscroll">
+        <div class="ms-left">
+            <div class="ms-section section-bella">
+                <div class="bloc bloc-color"></div>
             </div>
-        </div>
-        <div class="bloc bloc-text">
-            <div class="text">
-                <img class="bloc-text_logo" src="./src/assets/img/Logo.png" alt="logo bellatrix">
-                <h2>we are bellatrix</h2>
-                <p class="lato">the agency that will make you change the way you sell</p>
-                <p class="italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad.</p>
+            <!------------------------------------------>
+            <div class="ms-section section-mimosa">
+                <div class="bloc bloc-text">
+                    <div class="text">
+                        <img class="bloc-text_logo" src="./src/assets/img/mimologo.png" alt="logo bellatrix">
+                        <h2>mimosa apps</h2>
+                        <p class="lato">the agency that will make you change the way you sell</p>
+                        <p class="italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor
+                            incididunt ut labore
+                            et dolore magna aliqua. Ut enim ad.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
-    <!------------------------------------------>
-    <section class="section-mimosa">
-        <div class="bloc bloc-color"></div>
-        <div class="bloc bloc-text">
-            <div class="text">
-                <img class="bloc-text_logo" src="./src/assets/img/mimologo.png" alt="logo bellatrix">
-                <h2>mimosa apps</h2>
-                <p class="lato">the agency that will make you change the way you sell</p>
-                <p class="italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad.</p>
+            <div class="ms-section section-gatria">
+                <div class="bloc bloc-color">
+                    <div class="bloc-color_img"><img src="./src/assets/img/byhydrus.png" alt="logo bellatrix"></div>
+                    <div class="bloc-color_img"><img src="./src/assets/img/aday.png" alt="logo bellatrix"></div>
+                </div>
             </div>
-        </div>
-    </section>
-    <!------------------------------------------>
-    <section class="section-gatria">
-        <div class="bloc bloc-color">
-            <div class="bloc-color_img"><img src="./src/assets/img/byhydrus.png" alt="logo bellatrix"></div>
-            <div class="bloc-color_img"><img src="./src/assets/img/aday.png" alt="logo bellatrix"></div>
-        </div>
-        <div class="bloc bloc-text">
-            <div class="text">
-                <h2>design projects</h2>
-                <p class="lato">the agency that will make you change the way you sell</p>
-                <p class="italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad.</p>
-                <img class="signature" src="./src/assets/img/firm1.png" alt="logo bellatrix">
-            </div>
-        </div>
-    </section>
-    <!------------------------------------------>
-    <section class="section-adhara">
-        <div class="bloc bloc-color"></div>
-        <div class="bloc bloc-text">
-            <div class="text">
-                <h2>adhara coffee shop</h2>
-                <p class="lato">the agency that will make you change the way you sell</p>
-                <p class="italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad.</p>
-                <img class="signature" src="./src/assets/img/firm1.png" alt="logo bellatrix">
-            </div>
-        </div>
-    </section>
-    <!------------------------------------------>
-    <section class="section-amber">
-        <div class="bloc bloc-color"></div>
-        <div class="bloc bloc-text">
-            <div class="text">
-                <img src="./src/assets/img/Logo.png" alt="logo bellatrix">
-                <h2>amber liqueur</h2>
-                <p class="lato">the agency that will make you change the way you sell</p>
-                <p class="italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad.</p>
-                <img class="signature" src="./src/assets/img/firm1.png" alt="logo bellatrix">
-            </div>
-        </div>
-    </section>
-    <!------------------------------------------>
+            <div class="ms-section section-adhara">
+                <div class="bloc bloc-text">
+                    <div class="text">
+                        <h2>adhara coffee shop</h2>
+                        <p class="lato">the agency that will make you change the way you sell</p>
+                        <p class="italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor
+                            incididunt ut labore
+                            et dolore magna aliqua. Ut enim ad.</p>
+                        <img class="signature" src="./src/assets/img/firm1.png" alt="logo bellatrix">
+                    </div>
+                </div>
 
-    <footer>
-        <div class="footer-first">
-            <div class="bloc-footer">
-                <img src="./src/assets/img/LogoWhite2.png" alt="logo bellatrix">
-                <p>The agency that will make you change the way you sell</p>
-            </div><!--bloc-footer-->
-            <div class="bloc-footer">
-                <h3>contact us</h3>
-                <p>23 Mulholland Drive, Suite 721. Los Angeles 10010</p>
-                <ul>
-                    <li>Email: youremail@yourdomain.com</li>
-                    <li>Phone: +00 (0) 101 2200 000</li>
-                    <li>Phone: +00 (0) 101 2200 000</li>
-                    <li>Fax: +00 (0) 202 2200 001</li>
-                </ul>
-                <div class="bloc-footer_link">
-                    <span>Contact Us</span>
-                    <span class="icon-circle-right"></span>
-                    <span class="icon-search"></span>
-                    <span class="icon-share2"></span>
+            </div>
+            <div class="ms-section section-amber">
+                <div class="bloc bloc-color"></div>
+            </div>
+            <div class="ms-section section-footer">
+                    <div class="bloc bloc-color"></div>
                 </div>
-            </div><!--bloc-footer-->
-            <div class="bloc-footer">
-                <h3>Recet Tweets</h3>
-                <div class="bloc-footer_tweet">
-                    <img src="./src/assets/img/h.png" alt="H">
-                    <p><span>RT </span>“@astro_reid: Our gorgeous Earth
-                        at night under a <span>#fullmoonpic.twitter
-                        .com/PSyrUDiZ8x”</span>
-                    </p>
-                </div>
-                <div class="bloc-footer_tweet">
-                    <img src="./src/assets/img/h.png" alt="H">
-                    <p><span>@astro_reid</span> Fantastic picture! Could 
-                            you give us the settings you used? 
-                            ISO, time, f/stop etc?
-                    </p>
-                </div>
-            </div><!--bloc-footer-->
         </div>
-        <!--footer-first-->
-        <div class="footer-seconde">
-            <p>Made by Naughty Robot Themes</p>
+        <!------------------------------------------>
+        <!------------------------------------------>
+        <!------------------------------------------>
+        <div class="ms-right">
+            <div class="ms-section section-bella">
+                <div class="bloc bloc-text">
+                    <div class="text">
+                        <img class="bloc-text_logo" src="./src/assets/img/Logo.png" alt="logo bellatrix">
+                        <h2>we are bellatrix</h2>
+                        <p class="lato">the agency that will make you change the way you sell</p>
+                        <p class="italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore
+                            et dolore magna aliqua. Ut enim ad.</p>
+                    </div>
+                </div>
+            </div>
+            <!------------------------------------------>
+            <div class="ms-section section-mimosa">
+                <div class="bloc bloc-color"></div>
+            </div>
+            <!------------------------------------------>
+            <div class="ms-section section-gatria">
+                <div class="bloc bloc-text">
+                    <div class="text">
+                        <h2>design projects</h2>
+                        <p class="lato">the agency that will make you change the way you sell</p>
+                        <p class="italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor
+                            incididunt ut labore
+                            et dolore magna aliqua. Ut enim ad.</p>
+                        <img class="signature" src="./src/assets/img/firm1.png" alt="logo bellatrix">
+                    </div>
+                </div>
+            </div>
+            <div class="ms-section section-adhara">
+                <div class="bloc bloc-color"></div>
+            </div>
+
+            <div class="ms-section section-amber">
+                <div class="bloc bloc-text">
+                    <div class="text">
+                        <img src="./src/assets/img/Logo.png" alt="logo bellatrix">
+                        <h2>amber liqueur</h2>
+                        <p class="lato">the agency that will make you change the way you sell</p>
+                        <p class="italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor
+                            incididunt ut labore
+                            et dolore magna aliqua. Ut enim ad.</p>
+                        <img class="signature" src="./src/assets/img/firm1.png" alt="logo bellatrix">
+                    </div>
+                </div>
+            </div>
+
+            <div class="ms-section section-footer">
+                <footer>
+                    <div class="footer-first">
+                        <div class="bloc-footer">
+                            <img src="./src/assets/img/LogoWhite2.png" alt="logo bellatrix">
+                            <p>The agency that will make you change the way you sell</p>
+                        </div>
+                        <div class="bloc-footer">
+                            <h3>contact us</h3>
+                            <p>23 Mulholland Drive, Suite 721. Los Angeles 10010</p>
+                            <ul>
+                                <li>Email: youremail@yourdomain.com</li>
+                                <li>Phone: +00 (0) 101 2200 000</li>
+                                <li>Phone: +00 (0) 101 2200 000</li>
+                                <li>Fax: +00 (0) 202 2200 001</li>
+                            </ul>
+                            <div class="bloc-footer_link">
+                                <span>Contact Us</span>
+                                <span class="icon-circle-right"></span>
+                                <span class="icon-search"></span>
+                                <span class="icon-share2"></span>
+                            </div>
+                        </div>
+                        <div class="bloc-footer">
+                            <h3>Recet Tweets</h3>
+                            <div class="bloc-footer_tweet">
+                                <img src="./src/assets/img/h.png" alt="H">
+                                <p><span>RT </span>“@astro_reid: Our gorgeous Earth
+                                    at night under a <span>#fullmoonpic.twitter
+                                        .com/PSyrUDiZ8x”</span>
+                                </p>
+                            </div>
+                            <div class="bloc-footer_tweet">
+                                <img src="./src/assets/img/h.png" alt="H">
+                                <p><span>@astro_reid</span> Fantastic picture! Could
+                                    you give us the settings you used?
+                                    ISO, time, f/stop etc?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-seconde">
+                        <p>Made by Naughty Robot Themes</p>
+                    </div>
+                </footer>
+            </div>
         </div>
-    </footer>
+
+
+        <!------------------------------------------>
+
+
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="./vendors/jquery.easings.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/multiscroll.js/0.2.2/jquery.multiscroll.extensions.min.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

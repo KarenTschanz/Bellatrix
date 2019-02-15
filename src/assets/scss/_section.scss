@@ -5,17 +5,64 @@
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
+button{
+    border: none;
+    cursor: pointer;
+}
+
+ul{list-style: none;}
+
+li.presentation{
+    width: 8px;
+    height: 8px;
+    border: 3px solid $dark;
+    border-radius: 100%;
+    margin:10px 0;
+    
+}
+
+li.slick-active{
+    background: $dark;
+}
+
+.ms-right .section-footer {
+    width: 200%;
+    transform: translateX(-50%);
+    position: relative;
+    background: $backDark;
+}
+
+.ms-left .section-footer{
+    background: $backDark;
+}
+
+.ms-left,
+.ms-right{
+    @include breakpoint(phablet){
+        position: absolute !important;
+        display: block !important;
+        width: 100% !important;
+        height: 50% !important;
+    }
+}
+
+.ms-right{
+    @include breakpoint(phablet){
+        width:100%;
+    }
+}
 section {
-    display: flex;
+    display: flex !important;
     width: 100%;
     color: $dark;
     @include breakpoint(phablet){
         display: inline-block;
     }
 
-    &:nth-child(odd) {
+    &:nth-child(even) {
         flex-direction: row-reverse;
     }
 
@@ -60,6 +107,14 @@ section {
     display: flex;
     align-items: center;
     padding: $paddingBloc;
+    @include breakpoint(phablet){
+        z-index: 80;
+        top: 56%;
+        height: 100%;
+        transform: translateY(-50%);
+        position: absolute;
+        background: rgba($color: #fff, $alpha: 0.9)
+    }
 }
 
 .lato {
@@ -92,47 +147,47 @@ h2{
     }
 }
 
-.section-bella {
-    .bloc-color {
-        background: $jaunepipi;
-        position: relative;
-        &_button{
-            width: 90px;
-            height: 90px;
-            background: $dark;
-            position: fixed;
-            z-index: 2000;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%) rotate(45deg);
-
-            .button-line{
-                @extend .line;
-                background: white;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%) rotate(-45deg);
-            }
-            .icon-up-arrow,
-            .icon-down-arrow{
-                font-size: 30px;
-            }
-            .icon-up-arrow{
-                top: 10px;
-                left: 28%;
-                position: absolute;
-                transform:  translateX(-50%) rotate(-45deg) !important;
-            }
-
-            .icon-down-arrow{
-                top: 60%;
-                left: 75%;
-                position: absolute;
-                transform:  translateX(-50%) rotate(-45deg) !important;
-            }
-        }
+.bloc-color_button{
+    width: 90px;
+    height: 90px;
+    background: $dark;
+    position: fixed;
+    z-index: 2000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    @include breakpoint(phablet){
+        display: none;
     }
-    
+
+    .button-line{
+        @extend .line;
+        background: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%) rotate(-45deg);
+    }
+    .icon-up-arrow,
+    .icon-down-arrow{
+        font-size: 30px;
+    }
+    .icon-up-arrow{
+        top: 10px;
+        left: 28%;
+        position: absolute;
+        transform:  translateX(-50%) rotate(-45deg) !important;
+    }
+
+    .icon-down-arrow{
+        top: 60%;
+        left: 75%;
+        position: absolute;
+        transform:  translateX(-50%) rotate(-45deg) !important;
+    }
+}
+
+.ms-left .section-bella{
+    background: $jaunepipi;
 }
 
 .section-mimosa {
@@ -141,6 +196,7 @@ h2{
         background-size: cover;
         background-repeat: none;
         background-position: center center;
+        height: 100%;
     }
 }
 
@@ -150,6 +206,7 @@ h2{
         background-size: cover;
         background-repeat: none;
         background-position: center center;
+        height: 100%;
 
         .bloc-color_img {
             position: absolute;
@@ -187,6 +244,7 @@ h2{
         background-size: cover;
         background-repeat: none;
         background-position: center center;
+        height: 100%;
     }
 }
 
@@ -196,5 +254,16 @@ h2{
         background-size: cover;
         background-repeat: none;
         background-position: center center;
+        height: 100%;
     }
+}
+
+#multiscroll-nav li  span{
+    background: $dark;
+    border: 2px solid transparent;
+ }
+
+#multiscroll-nav li .active span{
+   border: 2px solid $dark;
+   background: white !important,
 }
