@@ -29,10 +29,14 @@ li.slick-active{
 }
 
 .ms-right .section-footer {
-    width: 200%;
+    width: 200% !important;
     transform: translateX(-50%);
     position: relative;
     background: $backDark;
+    @include breakpoint(phablet){
+        width:100% !important;
+        transform: translate(0);
+    }
 }
 
 .ms-left .section-footer{
@@ -74,32 +78,21 @@ section {
         }
     }
 
-    .bloc-text {
-        width: calc(50% - 25vw);
-        @include breakpoint(phablet){
-            width: 100%;
-        }
+}
 
-        &_logo{
-            margin-bottom: 45px;
-        }
-    }
-
-    .lato{
-        margin-bottom: 30px;
-        text-transform: uppercase;
-        font-size: 13px;
-        line-height: 24px;
-    }
-    .italic{
-        font-family: $fontMerri;
-        font-weight: 300;
-        font-style: italic;
-        font-size: 14px;
-        line-height: 22px;
-        letter-spacing: 1px;
-        margin-bottom: 60px;
-    }
+.lato{
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 24px;
+}
+.italic{
+    font-family: $fontMerri;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 1px;
 }
 
 .bloc-text {
@@ -108,12 +101,17 @@ section {
     align-items: center;
     padding: $paddingBloc;
     @include breakpoint(phablet){
+        width: 100%;
         z-index: 80;
         top: 56%;
         height: 100%;
         transform: translateY(-50%);
         position: absolute;
         background: rgba($color: #fff, $alpha: 0.9)
+    }
+
+    &_logo{
+        margin-bottom: 55px;
     }
 }
 
@@ -130,7 +128,7 @@ section {
 }
 
 h2{
-    font-size: get-vw(24px);
+    font-size: 24px;
     font-weight: 800;
     font-family: $fontMerri;
     text-transform: uppercase;
@@ -146,7 +144,9 @@ h2{
         transform: translate(-50%);
     }
 }
-
+.signature{
+    margin-top: 55px;
+}
 .bloc-color_button{
     width: 90px;
     height: 90px;

@@ -37,3 +37,7 @@ $(document).ready(function () {
         afterResize: function () {},
     });
 });
+
+$('.sandwich').on('click', function () {
+    $('nav').toggleClass('nav-resp');
+})
