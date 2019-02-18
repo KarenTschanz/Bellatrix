@@ -18,7 +18,7 @@ footer{
         padding-bottom: 130px; 
         @include breakpoint(phablet){
             display: inline-block;
-            padding: 0;
+            padding: 0 20px;
             margin: 0;
         }
 
@@ -27,11 +27,17 @@ footer{
     .footer-seconde{
         border-top: 2px solid $border;
         padding: 100px;
+        @include breakpoint(phablet){
+            padding: 20px 0;
+        }
         p{
             position: relative;
             width: get-vw(365px);
             margin: 0 auto;
             text-align: center;
+            @include breakpoint(phablet){
+               width: 80%;
+            }
         }
         p::before{
             @extend .line;
@@ -45,6 +51,9 @@ footer{
             right: get-vw(-40px);
             top: 50%;
             transform: translate(-50%);
+            @include breakpoint(phablet){
+                right: get-vw(-150px);
+             }
         }
     }
 
@@ -78,6 +87,8 @@ footer{
                 letter-spacing: 4px;
                 @include breakpoint(phablet){
                     font-size: 11px;
+                    margin: 0px 0 30px;
+                    padding: 0 30px;
                 }
             }
             p::before{
@@ -85,6 +96,9 @@ footer{
                 left: 50%;
                 top: 0;
                 transform: translateX(-50%);
+                @include breakpoint(phablet){
+                    display: none;
+                }
             }
         }
 
@@ -98,6 +112,10 @@ footer{
         &_link{
             margin-top: 35px;
             span{margin-right: 10px;}
+            @include breakpoint(phablet){
+                margin-top: 15px;
+                margin-bottom: 20px
+            }
         }
         &_tweet{
             margin-bottom: 40px;

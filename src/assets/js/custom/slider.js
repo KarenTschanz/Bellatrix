@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    $('.sandwich').on('click', function () {
+        $('nav').toggleClass('nav-resp');
+        $('sandwich').toggleClass('open');
+    })
     $('#multiscroll').multiscroll({
         verticalCentered: true,
         scrollingSpeed: 700,
@@ -37,7 +41,3 @@ $(document).ready(function () {
         afterResize: function () {},
     });
 });
-
-$('.sandwich').on('click', function () {
-    $('nav').toggleClass('nav-resp');
-})

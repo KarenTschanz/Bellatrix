@@ -8,23 +8,25 @@ a {
     cursor: pointer;
 }
 
-button{
+button {
     border: none;
     cursor: pointer;
 }
 
-ul{list-style: none;}
+ul {
+    list-style: none;
+}
 
-li.presentation{
+li.presentation {
     width: 8px;
     height: 8px;
     border: 3px solid $dark;
     border-radius: 100%;
-    margin:10px 0;
-    
+    margin: 10px 0;
+
 }
 
-li.slick-active{
+li.slick-active {
     background: $dark;
 }
 
@@ -33,19 +35,20 @@ li.slick-active{
     transform: translateX(-50%);
     position: relative;
     background: $backDark;
-    @include breakpoint(phablet){
-        width:100% !important;
+
+    @include breakpoint(phablet) {
+        width: 100% !important;
         transform: translate(0);
     }
 }
 
-.ms-left .section-footer{
+.ms-left .section-footer {
     background: $backDark;
 }
 
 .ms-left,
-.ms-right{
-    @include breakpoint(phablet){
+.ms-right {
+    @include breakpoint(phablet) {
         position: absolute !important;
         display: block !important;
         width: 100% !important;
@@ -53,16 +56,18 @@ li.slick-active{
     }
 }
 
-.ms-right{
-    @include breakpoint(phablet){
-        width:100%;
+.ms-right {
+    @include breakpoint(phablet) {
+        width: 100%;
     }
 }
+
 section {
     display: flex !important;
     width: 100%;
     color: $dark;
-    @include breakpoint(phablet){
+
+    @include breakpoint(phablet) {
         display: inline-block;
     }
 
@@ -73,20 +78,22 @@ section {
     .bloc {
         width: 50%;
         position: relative;
-        @include breakpoint(phablet){
+
+        @include breakpoint(phablet) {
             width: 100%;
         }
     }
 
 }
 
-.lato{
+.lato {
     margin-bottom: 30px;
     text-transform: uppercase;
     font-size: 13px;
     line-height: 24px;
 }
-.italic{
+
+.italic {
     font-family: $fontMerri;
     font-weight: 300;
     font-style: italic;
@@ -100,17 +107,21 @@ section {
     display: flex;
     align-items: center;
     padding: $paddingBloc;
-    @include breakpoint(phablet){
+
+    @include breakpoint(phablet) {
         width: 100%;
         z-index: 80;
         top: 56%;
         height: 100%;
+        left: 0;
+        padding: 0 15%;
+        width: 70%;
         transform: translateY(-50%);
         position: absolute;
         background: rgba($color: #fff, $alpha: 0.9)
     }
 
-    &_logo{
+    &_logo {
         margin-bottom: 55px;
     }
 }
@@ -127,7 +138,7 @@ section {
     background: $fontWhite;
 }
 
-h2{
+h2 {
     font-size: 24px;
     font-weight: 800;
     font-family: $fontMerri;
@@ -136,7 +147,8 @@ h2{
     position: relative;
     padding-bottom: 30px;
     margin-bottom: 30px;
-    &::before{
+
+    &::before {
         @extend .line;
         background: $dark;
         bottom: 0;
@@ -144,10 +156,12 @@ h2{
         transform: translate(-50%);
     }
 }
-.signature{
+
+.signature {
     margin-top: 55px;
 }
-.bloc-color_button{
+
+.bloc-color_button {
     width: 90px;
     height: 90px;
     background: $dark;
@@ -156,37 +170,40 @@ h2{
     top: 50%;
     left: 50%;
     transform: translate(-50%) rotate(45deg);
-    @include breakpoint(phablet){
+
+    @include breakpoint(phablet) {
         display: none;
     }
 
-    .button-line{
+    .button-line {
         @extend .line;
         background: white;
         top: 50%;
         left: 50%;
         transform: translate(-50%) rotate(-45deg);
     }
+
     .icon-up-arrow,
-    .icon-down-arrow{
+    .icon-down-arrow {
         font-size: 30px;
     }
-    .icon-up-arrow{
+
+    .icon-up-arrow {
         top: 10px;
         left: 28%;
         position: absolute;
-        transform:  translateX(-50%) rotate(-45deg) !important;
+        transform: translateX(-50%) rotate(-45deg) !important;
     }
 
-    .icon-down-arrow{
+    .icon-down-arrow {
         top: 60%;
         left: 75%;
         position: absolute;
-        transform:  translateX(-50%) rotate(-45deg) !important;
+        transform: translateX(-50%) rotate(-45deg) !important;
     }
 }
 
-.ms-left .section-bella{
+.ms-left .section-bella {
     background: $jaunepipi;
 }
 
@@ -221,7 +238,7 @@ h2{
             &:first-child {
                 img {
                     position: relative;
-                    margin-top: 25%;
+                    margin-top: 20vh;
                 }
             }
 
@@ -258,12 +275,12 @@ h2{
     }
 }
 
-#multiscroll-nav li  span{
+#multiscroll-nav li span {
     background: $dark;
     border: 2px solid transparent;
- }
+}
 
-#multiscroll-nav li .active span{
-   border: 2px solid $dark;
-   background: white !important,
+#multiscroll-nav li .active span {
+    border: 2px solid $dark;
+    background: white !important,
 }

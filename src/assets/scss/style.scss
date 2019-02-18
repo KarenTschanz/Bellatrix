@@ -1,5 +1,6 @@
-@import 'variable';
-@import 'mixin';
-@import 'header';
-@import 'footer';
-@import 'section';
+@import 'layout/variable';
+@import 'layout/mixin';
+
+@import 'partials/header';
+@import 'partials/footer';
+@import 'partials/section';
