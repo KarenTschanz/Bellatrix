@@ -10,6 +10,7 @@ var cssnano = require('gulp-cssnano');
 var rename = require("gulp-rename");
 var runSequence = require('run-sequence');
 var closureCompiler = require('gulp-closure-compiler');
+var imagemin = require('gulp-imagemin');
 
 // Development Tasks 
 // -----------------
@@ -22,8 +23,9 @@ gulp.task('browserSync', function () {
 
 // Sass
 gulp.task('sass', function () {
-    return gulp.src('./src/assets/scss/**/*.scss') // Gets all files ending with .scss in scss and children dirs
+    return gulp.src('./src/assets/dev/scss/**/*.scss') // Gets all files ending with .scss in scss and children dirs
         .pipe(sourcemaps.init())
+        
         .pipe(sass({
             outputStyle: 'compact',
         }).on('error', sass.logError))
@@ -32,20 +34,22 @@ gulp.task('sass', function () {
         .pipe(rename({
             suffix: '.min'
         }))
-        .pipe(gulp.dest('./src/assets/css'))
+        .pipe(autoprefixer({
+            browsers: ['last 3 versions', 'iOS 7']
+            , cascade: false
+        }))
+        .pipe(gulp.dest('./src/assets/build/css'))
         .pipe(browserSync.reload({ // Reloading with Browser Sync
             stream: true
         }));
 });
 
-// Auto prefixer
-gulp.task('autoprefix', function () {
-    return gulp.src('./src/assets/css/style.css')
-        .pipe(autoprefixer({
-            browsers: ['last 3 versions', 'iOS 7']
-            , cascade: false
-        }))
-        .pipe(gulp.dest('.'));
+//IMAGE
+
+gulp.task('imagemin', function(){
+    return gulp.src('./src/assets/dev/img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('./src/assets/build/img'))
 });
 
 //JS
@@ -56,15 +60,14 @@ gulp.task('autoprefix', function () {
 // });
 
 gulp.task('minjs', function () {
-    return gulp.src('./src/assets/js/**/*.js')
+    return gulp.src('./src/assets/dev/js/**/*.js')
         .pipe(uglify().on('error', function(e){
             console.log(e);
         }))
         .pipe(rename({
             suffix: '.min'
         }))
-        .pipe(gulp.dest('./src/assets/js'));
-    
+        .pipe(gulp.dest('./src/assets/build/js'));
 });
 
 // Build Sequences
@@ -77,6 +80,7 @@ gulp.task('prod', function () {
         port:3000
     });
     gulp.watch('./*.html').on('change', browserSync.reload);
-    gulp.watch('./src/assets/scss/**/*.scss', gulp.series('sass', 'autoprefix'));
-    gulp.watch('./src/assets/js/**/*.js',  gulp.series('minjs'), browserSync.reload);
+    gulp.watch('./src/assets/dev/scss/**/*.scss', gulp.series('sass'));
+    gulp.watch('./src/assets/dev/img/**', gulp.series('imagemin'));
+    gulp.watch('./src/assets/dev/js/**/*.js',  gulp.series('minjs'), browserSync.reload);
 });

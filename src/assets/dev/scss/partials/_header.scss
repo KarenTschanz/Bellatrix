@@ -110,20 +110,22 @@ header{
             }
         }
 
-        &.open{
-            span{
-               &.top{
-                    transform: rotate(90deg);
-                }
-                &.middle{
-                    top: 20px;
-                }
-                &.bottom{
-                    transform: rotate(90deg);
-                }
+        
+
+    }
+
+    .open{
+        span{
+           &.top{
+                transform: rotate(90deg);
+            }
+            &.middle{
+                top: 20px;
+            }
+            &.bottom{
+                transform: rotate(90deg);
             }
         }
-
     }
 
     .shop{

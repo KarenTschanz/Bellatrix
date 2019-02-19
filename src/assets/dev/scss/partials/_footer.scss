@@ -146,6 +146,7 @@ footer{
         margin-bottom: 50px;
         @include breakpoint(phablet){
             margin-bottom: 20px;
+            margin-top: 20px;
         }
     }
 
