@@ -94,36 +94,42 @@ header{
         span{
             content: '';
             position: absolute;
-            width: 50px;
+            width: 40px;
             height: 3px;
             left: 0;
             background: $fontWhite;
 
            &.top{
                 top: 10px;
+                transition: 0.2s all ease-in-out;
+                transform-origin: center;
             }
             &.middle{
                 top: 20px;
+                transition: 0.2s all ease-in-out;
+                transform-origin: center;
             }
             &.bottom{
                 top: 30px;
+                transition: 0.2s all ease-in-out;
+                transform-origin: center;
             }
         }
-
-        
 
     }
 
     .open{
         span{
            &.top{
-                transform: rotate(90deg);
+               top: 15px;
+                transform: rotate(45deg);
             }
             &.middle{
-                top: 20px;
+                opacity: 0;
             }
             &.bottom{
-                transform: rotate(90deg);
+                top: 15px;
+                transform: rotate(-45deg);
             }
         }
     }

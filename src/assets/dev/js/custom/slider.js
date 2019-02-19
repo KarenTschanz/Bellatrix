@@ -1,7 +1,12 @@
 $(document).ready(function () {
     $('.sandwich').on('click', function () {
-        $('nav').toggleClass('nav-resp');
-        $('sandwich').toggleClass('open');
+        var nav = $('nav');
+        nav.toggleClass('nav-resp');
+        if(nav.hasClass('nav-resp')){
+            $('.sandwich').addClass('open');
+        }else{
+            $('.sandwich').removeClass('open');
+        }
     })
     $('#multiscroll').multiscroll({
         verticalCentered: true,
